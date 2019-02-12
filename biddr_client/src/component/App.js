@@ -6,6 +6,7 @@ import NavBar from './NavBar'
 import SignInPage from './SignInPage'
 import { User, Session } from "../requests";
 import AuctionShowPage from './AuctionShowPage'
+import AuctionNewPage from './AuctionNewPage'
 
 
 
@@ -52,13 +53,14 @@ class App extends Component {
                 <div>
                     <NavBar currentUser={currentUser} onSignOut={this.destroySession} />
                     <Switch>
+                        <Route path="/auctions/new" exact component={AuctionNewPage} />
                         <Route path="/" exact component={WelcomePage}/>
                         <Route path="/auctions" exact component={AuctionIndexPage}/>
                         <Route path="/sign_in" render={routeProps => (
                             <SignInPage {...routeProps} onSignIn={this.getCurrentUser} />
                             )}
                         />
-                        <Route path="/auctions/:id" component={AuctionShowPage} />
+                        <Route path="/auctions/:id" exact component={AuctionShowPage} />
 
                     </Switch>
                 </div>

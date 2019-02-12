@@ -9,8 +9,6 @@ function AuctionDetails (props){
             <p><b>Reserve price:</b> {props.reserve_price}</p>
 
             <p>
-                <small>Created {props.created_at.toLocaleString()}</small>•
-                <small>Last edited {props.updated_at.toLocaleString()}</small>
             </p>  
         </div>
     )

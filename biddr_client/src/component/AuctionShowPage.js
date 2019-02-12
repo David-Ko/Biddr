@@ -31,15 +31,12 @@ class AuctionShowPage extends Component {
         })
     }
     
-   
     render(){
-
         if (this.state.loading){
             return (<h1>
                 Loading...
             </h1>)
         }
-        
         if (!this.state.auction){
             return (
                 <h1>This auction doesn't exist</h1>

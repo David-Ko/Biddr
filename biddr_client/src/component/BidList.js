@@ -7,9 +7,7 @@ const BidList = props => {
             {props.bids.map(bid=>{
                 return(
                     <li key={bid.id}>
-                        <BidDetails 
-                            {...bid}
-                            />
+                        <BidDetails {...bid}/>
                     </li>
                 )
             })}
