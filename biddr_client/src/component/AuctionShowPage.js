@@ -15,11 +15,14 @@ class AuctionShowPage extends Component {
     }
 
     createBid(params) {
-        Bid.create(params).then(data => {
+        let id = this.props.match.params.id
+        Bid.create(params, id).then(data => {
         //   if (data.errors) {
             // this.setState({ errors: data.errors });
         //   } else {
-            this.props.history.push(`/auctions/${data.auction.id}`);
+            // this.props.history.push("/");
+            // this.props.history.push(`/auctions/${data.auction.id}`);
+            this.props.history.push(`/auctions`);
         //   }
         });
     }
