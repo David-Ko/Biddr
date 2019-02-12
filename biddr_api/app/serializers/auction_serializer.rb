@@ -13,7 +13,7 @@ class AuctionSerializer < ActiveModel::Serializer
     has_many(:bids)
 
     class BidSerializer < ActiveModel::Serializer
-      attributes :id, :price, :created_at, :updated_at
+      attributes :id, :price, :created_at, :updated_at, :auction_id
 
       belongs_to(:user)
     end
