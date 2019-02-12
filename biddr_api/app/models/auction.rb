@@ -24,11 +24,11 @@ class Auction < ApplicationRecord
       }
     )
 
-    validate(:check_ends_at)
+    # validate(:check_ends_at)
 
     private 
     def check_ends_at
-        if self.ends_at <= self.created_at
+        if self.ends_at < self.created_at
             self.errors.add(:ends_at, "Ends at date must be after Created at date")
         end
     end

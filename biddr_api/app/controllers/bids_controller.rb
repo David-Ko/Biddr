@@ -4,9 +4,15 @@ class BidsController < ApplicationController
     def create
         bid = Bid.new bid_params
         bid.user = current_user 
-        bid.auction = params[:auction_id]
-         bid.save!
+        bid.auction_id = params[:auction_id]
+        if bid.save!
             render json: {id: bid.id}
+        else
+            render(
+                json: {errors: bid.errors},
+                status: 422
+            )
+        end
     end
 
     private
