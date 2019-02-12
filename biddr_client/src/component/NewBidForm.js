@@ -1,5 +1,5 @@
 import React from 'react';
-// import FormErrors from './FormErrors';
+import FormErrors from './FormErrors';
 
 function NewBidForm (props) {
     const {errors = []} = props;
@@ -23,7 +23,7 @@ function NewBidForm (props) {
             <form className="BidForm" onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor="price">price</label> <br />
-                    {/* <FormErrors noField forField="title" errors={errors} /> */}
+                    <FormErrors noField forField="price" errors={errors} />
                     <textarea name="price" id="price" cols="60" rows="4" />
                 </div>
                 <div>

@@ -2,11 +2,13 @@ import React, {Component} from "react";
 import WelcomePage from "./WelcomePage";
 import AuctionIndexPage from "./AuctionIndexPage";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import NavBar from './NavBar'
-import SignInPage from './SignInPage'
+import NavBar from './NavBar';
+import SignInPage from './SignInPage';
 import { User, Session } from "../requests";
-import AuctionShowPage from './AuctionShowPage'
-import AuctionNewPage from './AuctionNewPage'
+import AuctionShowPage from './AuctionShowPage';
+import AuctionNewPage from './AuctionNewPage';
+import AuthRoute from "./AuthRoute";
+
 
 
 
@@ -53,6 +55,12 @@ class App extends Component {
                 <div>
                     <NavBar currentUser={currentUser} onSignOut={this.destroySession} />
                     <Switch>
+                        {/* <Route path="/auctions/new" exact component={AuctionNewPage} /> */}
+                        <AuthRoute 
+                        isAllowed={currentUser}
+                        path="/auctions/new"
+                        component={AuctionNewPage}
+                        />
                         <Route path="/auctions/new" exact component={AuctionNewPage} />
                         <Route path="/" exact component={WelcomePage}/>
                         <Route path="/auctions" exact component={AuctionIndexPage}/>

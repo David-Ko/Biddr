@@ -8,10 +8,8 @@ class SignInPage extends Component {
     this.state = {
       errors: []
     };
-
     this.createSession = this.createSession.bind(this);
   }
-
   createSession(event) {
     event.preventDefault();
     const { currentTarget } = event;
@@ -54,7 +52,6 @@ class SignInPage extends Component {
             <label htmlFor="password">Password</label> <br />
             <input type="password" name="password" id="password" />
           </div>
-
           <input type="submit" value="Sign In" />
         </form>
       </main>
