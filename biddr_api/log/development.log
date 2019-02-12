@@ -95,3 +95,480 @@ FOREIGN KEY ("user_id")
   ↳ bin/rails:9
   [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:9
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mBid Load (51.4ms)[0m  [1m[34mSELECT "bids".* FROM "bids"[0m
+  ↳ db/seeds.rb:8
+  [1m[36mAuction Load (28.3ms)[0m  [1m[34mSELECT "auctions".* FROM "auctions"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "js@winterfell.gov"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mUser Create (43.1ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "Jon"], ["last_name", "Snow"], ["email", "js@winterfell.gov"], ["password_digest", "$2a$10$OCCUm5b94GffvZsEBcm.heebShKKcRHYINDN9YzoSqoD7F6ms2uv."], ["created_at", "2019-02-12 19:28:59.382362"], ["updated_at", "2019-02-12 19:28:59.382362"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (3.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "bella-leuschke@example.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "Bella"], ["last_name", "Leuschke"], ["email", "bella-leuschke@example.com"], ["password_digest", "$2a$10$y60tB.GBEYYN62V1cOMFHec.nw51FzF7TcXtvDQThQy4UA2/C.ala"], ["created_at", "2019-02-12 19:29:00.736323"], ["updated_at", "2019-02-12 19:29:00.736323"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "brendan-cummings@example.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "Brendan"], ["last_name", "Cummings"], ["email", "brendan-cummings@example.com"], ["password_digest", "$2a$10$KIMaDrlFgXVesb6KhvOAv.34LvsnC0frQVs3HMhmyR4cL50Xuf84a"], ["created_at", "2019-02-12 19:29:00.814550"], ["updated_at", "2019-02-12 19:29:00.814550"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "reid-bosco@example.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "Reid"], ["last_name", "Bosco"], ["email", "reid-bosco@example.com"], ["password_digest", "$2a$10$NIUitngdQ7J1rGuSQSWVgeLWDeMBJ4Lh4XW/c3eO4gRmS3cNbrd6m"], ["created_at", "2019-02-12 19:29:00.904526"], ["updated_at", "2019-02-12 19:29:00.904526"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "candis-lesch@example.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "Candis"], ["last_name", "Lesch"], ["email", "candis-lesch@example.com"], ["password_digest", "$2a$10$P9witieqjrjWjwMzpWd55ePZ8ra3UJU7VQoj9G0CUa8FdY2cb/z92"], ["created_at", "2019-02-12 19:29:00.979607"], ["updated_at", "2019-02-12 19:29:00.979607"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jeanette-senger@example.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "Jeanette"], ["last_name", "Senger"], ["email", "jeanette-senger@example.com"], ["password_digest", "$2a$10$v9a82QpM0A43N5qp7VELPu0EVRDBPupUfHs0GxPmVZTQZrnUG6hfe"], ["created_at", "2019-02-12 19:29:01.053245"], ["updated_at", "2019-02-12 19:29:01.053245"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "emmanuel-quigley@example.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mUser Create (2.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "Emmanuel"], ["last_name", "Quigley"], ["email", "emmanuel-quigley@example.com"], ["password_digest", "$2a$10$AJLDBH8RjbjfVyxmOYrZo..MeYe0nRXwMJ31KJDVi5FyVrXrQZJ3S"], ["created_at", "2019-02-12 19:29:01.127755"], ["updated_at", "2019-02-12 19:29:01.127755"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ngan-kertzmann@example.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "Ngan"], ["last_name", "Kertzmann"], ["email", "ngan-kertzmann@example.com"], ["password_digest", "$2a$10$QMxjUobpXqojmZiiZT1KX.7Zg0ov7VREKdZa5HxbcmZAEfEYhvfZa"], ["created_at", "2019-02-12 19:29:01.207492"], ["updated_at", "2019-02-12 19:29:01.207492"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jaquelyn-boyle@example.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "Jaquelyn"], ["last_name", "Boyle"], ["email", "jaquelyn-boyle@example.com"], ["password_digest", "$2a$10$RAtdqIpksn3koPpnkKM1E.BqXBbi.VctId4nPvcNgN4VAFqojXRKy"], ["created_at", "2019-02-12 19:29:01.288197"], ["updated_at", "2019-02-12 19:29:01.288197"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "luanne-waelchi@example.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "Luanne"], ["last_name", "Waelchi"], ["email", "luanne-waelchi@example.com"], ["password_digest", "$2a$10$P457nLzXO0xgfANoKDYBgu0d95gVr13D2xuXY3rYTbMlUJdZcDTUm"], ["created_at", "2019-02-12 19:29:01.361728"], ["updated_at", "2019-02-12 19:29:01.361728"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jared-blick@example.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "Jared"], ["last_name", "Blick"], ["email", "jared-blick@example.com"], ["password_digest", "$2a$10$fESLkd4YcULbYb.WaxnATuKeDybf/4SoLYE3bNuPtUwwZ8RqDhHgu"], ["created_at", "2019-02-12 19:29:01.437142"], ["updated_at", "2019-02-12 19:29:01.437142"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:45
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:38
+  [1m[36mAuction Create (28.6ms)[0m  [1m[32mINSERT INTO "auctions" ("title", "description", "ends_at", "reserve_price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "The HTTP array is down, input the back-end application so we can hack the XSS feed!"], ["description", "Chuck Norris' preferred IDE is hexedit."], ["ends_at", "2019-10-23"], ["reserve_price", 500], ["user_id", 7], ["created_at", "2018-01-27 00:00:00"], ["updated_at", "2018-01-27 00:00:00"]]
+  ↳ db/seeds.rb:38
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mBid Create (1.0ms)[0m  [1m[32mINSERT INTO "bids" ("price", "auction_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 1000], ["auction_id", 1], ["user_id", 8], ["created_at", "2019-02-12 19:29:01.530890"], ["updated_at", "2019-02-12 19:29:01.530890"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (44.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mBid Create (0.5ms)[0m  [1m[32mINSERT INTO "bids" ("price", "auction_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 1000], ["auction_id", 1], ["user_id", 5], ["created_at", "2019-02-12 19:29:01.579133"], ["updated_at", "2019-02-12 19:29:01.579133"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mBid Create (0.6ms)[0m  [1m[32mINSERT INTO "bids" ("price", "auction_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 1000], ["auction_id", 1], ["user_id", 8], ["created_at", "2019-02-12 19:29:01.583231"], ["updated_at", "2019-02-12 19:29:01.583231"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mBid Create (0.4ms)[0m  [1m[32mINSERT INTO "bids" ("price", "auction_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 1000], ["auction_id", 1], ["user_id", 9], ["created_at", "2019-02-12 19:29:01.587510"], ["updated_at", "2019-02-12 19:29:01.587510"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mBid Create (0.5ms)[0m  [1m[32mINSERT INTO "bids" ("price", "auction_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 1000], ["auction_id", 1], ["user_id", 7], ["created_at", "2019-02-12 19:29:01.591440"], ["updated_at", "2019-02-12 19:29:01.591440"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:38
+  [1m[36mAuction Create (0.4ms)[0m  [1m[32mINSERT INTO "auctions" ("title", "description", "ends_at", "reserve_price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "If we bypass the sensor, we can get to the RAM application through the bluetooth SSL feed!"], ["description", "Chuck Norris can instantiate an abstract class."], ["ends_at", "2019-11-11"], ["reserve_price", 500], ["user_id", 10], ["created_at", "2016-09-23 00:00:00"], ["updated_at", "2016-09-23 00:00:00"]]
+  ↳ db/seeds.rb:38
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mBid Create (0.6ms)[0m  [1m[32mINSERT INTO "bids" ("price", "auction_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 1000], ["auction_id", 2], ["user_id", 6], ["created_at", "2019-02-12 19:29:01.601960"], ["updated_at", "2019-02-12 19:29:01.601960"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mBid Create (0.4ms)[0m  [1m[32mINSERT INTO "bids" ("price", "auction_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 1000], ["auction_id", 2], ["user_id", 4], ["created_at", "2019-02-12 19:29:01.606040"], ["updated_at", "2019-02-12 19:29:01.606040"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mBid Create (0.4ms)[0m  [1m[32mINSERT INTO "bids" ("price", "auction_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 1000], ["auction_id", 2], ["user_id", 9], ["created_at", "2019-02-12 19:29:01.609638"], ["updated_at", "2019-02-12 19:29:01.609638"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mBid Create (0.4ms)[0m  [1m[32mINSERT INTO "bids" ("price", "auction_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 1000], ["auction_id", 2], ["user_id", 10], ["created_at", "2019-02-12 19:29:01.613288"], ["updated_at", "2019-02-12 19:29:01.613288"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mBid Create (0.6ms)[0m  [1m[32mINSERT INTO "bids" ("price", "auction_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 1000], ["auction_id", 2], ["user_id", 2], ["created_at", "2019-02-12 19:29:01.616880"], ["updated_at", "2019-02-12 19:29:01.616880"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:38
+  [1m[36mAuction Create (0.7ms)[0m  [1m[32mINSERT INTO "auctions" ("title", "description", "ends_at", "reserve_price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Use the cross-platform EXE driver, then you can compress the neural feed!"], ["description", "Chuck Norris can write multi-threaded applications with a single thread."], ["ends_at", "2020-01-01"], ["reserve_price", 500], ["user_id", 6], ["created_at", "2014-06-12 00:00:00"], ["updated_at", "2014-06-12 00:00:00"]]
+  ↳ db/seeds.rb:38
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mBid Create (0.4ms)[0m  [1m[32mINSERT INTO "bids" ("price", "auction_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 1000], ["auction_id", 3], ["user_id", 3], ["created_at", "2019-02-12 19:29:01.626786"], ["updated_at", "2019-02-12 19:29:01.626786"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mBid Create (0.4ms)[0m  [1m[32mINSERT INTO "bids" ("price", "auction_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 1000], ["auction_id", 3], ["user_id", 7], ["created_at", "2019-02-12 19:29:01.630227"], ["updated_at", "2019-02-12 19:29:01.630227"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (39.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mBid Create (0.4ms)[0m  [1m[32mINSERT INTO "bids" ("price", "auction_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 1000], ["auction_id", 3], ["user_id", 8], ["created_at", "2019-02-12 19:29:01.672679"], ["updated_at", "2019-02-12 19:29:01.672679"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mBid Create (0.4ms)[0m  [1m[32mINSERT INTO "bids" ("price", "auction_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 1000], ["auction_id", 3], ["user_id", 6], ["created_at", "2019-02-12 19:29:01.676535"], ["updated_at", "2019-02-12 19:29:01.676535"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mBid Create (2.0ms)[0m  [1m[32mINSERT INTO "bids" ("price", "auction_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 1000], ["auction_id", 3], ["user_id", 6], ["created_at", "2019-02-12 19:29:01.680447"], ["updated_at", "2019-02-12 19:29:01.680447"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:38
+  [1m[36mAuction Create (0.5ms)[0m  [1m[32mINSERT INTO "auctions" ("title", "description", "ends_at", "reserve_price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "I'll transmit the wireless USB matrix, that should program the COM program!"], ["description", "Project managers never ask Chuck Norris for estimations... ever."], ["ends_at", "2019-05-04"], ["reserve_price", 500], ["user_id", 3], ["created_at", "2018-08-05 00:00:00"], ["updated_at", "2018-08-05 00:00:00"]]
+  ↳ db/seeds.rb:38
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mBid Create (0.4ms)[0m  [1m[32mINSERT INTO "bids" ("price", "auction_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 1000], ["auction_id", 4], ["user_id", 1], ["created_at", "2019-02-12 19:29:01.692781"], ["updated_at", "2019-02-12 19:29:01.692781"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mBid Create (0.4ms)[0m  [1m[32mINSERT INTO "bids" ("price", "auction_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 1000], ["auction_id", 4], ["user_id", 4], ["created_at", "2019-02-12 19:29:01.696669"], ["updated_at", "2019-02-12 19:29:01.696669"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mBid Create (0.4ms)[0m  [1m[32mINSERT INTO "bids" ("price", "auction_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 1000], ["auction_id", 4], ["user_id", 7], ["created_at", "2019-02-12 19:29:01.700838"], ["updated_at", "2019-02-12 19:29:01.700838"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mBid Create (0.4ms)[0m  [1m[32mINSERT INTO "bids" ("price", "auction_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 1000], ["auction_id", 4], ["user_id", 11], ["created_at", "2019-02-12 19:29:01.705208"], ["updated_at", "2019-02-12 19:29:01.705208"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mBid Create (0.4ms)[0m  [1m[32mINSERT INTO "bids" ("price", "auction_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 1000], ["auction_id", 4], ["user_id", 11], ["created_at", "2019-02-12 19:29:01.709039"], ["updated_at", "2019-02-12 19:29:01.709039"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:38
+  [1m[36mAuction Create (0.4ms)[0m  [1m[32mINSERT INTO "auctions" ("title", "description", "ends_at", "reserve_price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "We need to back up the solid state GB alarm!"], ["description", "Chuck Norris never gets a syntax error. Instead, the language gets a DoesNotConformToChuck error."], ["ends_at", "2019-05-15"], ["reserve_price", 500], ["user_id", 3], ["created_at", "2017-08-27 00:00:00"], ["updated_at", "2017-08-27 00:00:00"]]
+  ↳ db/seeds.rb:38
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mBid Create (0.4ms)[0m  [1m[32mINSERT INTO "bids" ("price", "auction_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 1000], ["auction_id", 5], ["user_id", 7], ["created_at", "2019-02-12 19:29:01.718008"], ["updated_at", "2019-02-12 19:29:01.718008"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mBid Create (0.4ms)[0m  [1m[32mINSERT INTO "bids" ("price", "auction_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 1000], ["auction_id", 5], ["user_id", 10], ["created_at", "2019-02-12 19:29:01.721837"], ["updated_at", "2019-02-12 19:29:01.721837"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mBid Create (0.4ms)[0m  [1m[32mINSERT INTO "bids" ("price", "auction_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 1000], ["auction_id", 5], ["user_id", 7], ["created_at", "2019-02-12 19:29:01.725878"], ["updated_at", "2019-02-12 19:29:01.725878"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mBid Create (0.4ms)[0m  [1m[32mINSERT INTO "bids" ("price", "auction_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 1000], ["auction_id", 5], ["user_id", 4], ["created_at", "2019-02-12 19:29:01.729859"], ["updated_at", "2019-02-12 19:29:01.729859"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mBid Create (0.5ms)[0m  [1m[32mINSERT INTO "bids" ("price", "auction_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 1000], ["auction_id", 5], ["user_id", 5], ["created_at", "2019-02-12 19:29:01.733672"], ["updated_at", "2019-02-12 19:29:01.733672"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:38
+  [1m[36mAuction Create (0.4ms)[0m  [1m[32mINSERT INTO "auctions" ("title", "description", "ends_at", "reserve_price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "The HTTP capacitor is down, bypass the virtual firewall so we can quantify the JSON protocol!"], ["description", "Chuck Norris doesn't use web standards as the web will conform to him."], ["ends_at", "2020-01-30"], ["reserve_price", 500], ["user_id", 6], ["created_at", "2014-05-01 00:00:00"], ["updated_at", "2014-05-01 00:00:00"]]
+  ↳ db/seeds.rb:38
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mBid Create (0.4ms)[0m  [1m[32mINSERT INTO "bids" ("price", "auction_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 1000], ["auction_id", 6], ["user_id", 8], ["created_at", "2019-02-12 19:29:01.742939"], ["updated_at", "2019-02-12 19:29:01.742939"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mBid Create (0.4ms)[0m  [1m[32mINSERT INTO "bids" ("price", "auction_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 1000], ["auction_id", 6], ["user_id", 11], ["created_at", "2019-02-12 19:29:01.746589"], ["updated_at", "2019-02-12 19:29:01.746589"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mBid Create (2.5ms)[0m  [1m[32mINSERT INTO "bids" ("price", "auction_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 1000], ["auction_id", 6], ["user_id", 9], ["created_at", "2019-02-12 19:29:01.750342"], ["updated_at", "2019-02-12 19:29:01.750342"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mBid Create (0.4ms)[0m  [1m[32mINSERT INTO "bids" ("price", "auction_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 1000], ["auction_id", 6], ["user_id", 2], ["created_at", "2019-02-12 19:29:01.756888"], ["updated_at", "2019-02-12 19:29:01.756888"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mBid Create (0.4ms)[0m  [1m[32mINSERT INTO "bids" ("price", "auction_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 1000], ["auction_id", 6], ["user_id", 6], ["created_at", "2019-02-12 19:29:01.760857"], ["updated_at", "2019-02-12 19:29:01.760857"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:38
+  [1m[36mAuction Create (0.3ms)[0m  [1m[32mINSERT INTO "auctions" ("title", "description", "ends_at", "reserve_price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "If we reboot the pixel, we can get to the ADP capacitor through the primary USB sensor!"], ["description", "Chuck Norris doesn't use a computer because a computer does everything slower than Chuck Norris."], ["ends_at", "2019-04-14"], ["reserve_price", 500], ["user_id", 2], ["created_at", "2017-10-17 00:00:00"], ["updated_at", "2017-10-17 00:00:00"]]
+  ↳ db/seeds.rb:38
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mBid Create (0.5ms)[0m  [1m[32mINSERT INTO "bids" ("price", "auction_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 1000], ["auction_id", 7], ["user_id", 4], ["created_at", "2019-02-12 19:29:01.769564"], ["updated_at", "2019-02-12 19:29:01.769564"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mBid Create (0.3ms)[0m  [1m[32mINSERT INTO "bids" ("price", "auction_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 1000], ["auction_id", 7], ["user_id", 5], ["created_at", "2019-02-12 19:29:01.773434"], ["updated_at", "2019-02-12 19:29:01.773434"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mBid Create (0.4ms)[0m  [1m[32mINSERT INTO "bids" ("price", "auction_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 1000], ["auction_id", 7], ["user_id", 11], ["created_at", "2019-02-12 19:29:01.776952"], ["updated_at", "2019-02-12 19:29:01.776952"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mBid Create (0.4ms)[0m  [1m[32mINSERT INTO "bids" ("price", "auction_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 1000], ["auction_id", 7], ["user_id", 10], ["created_at", "2019-02-12 19:29:01.781749"], ["updated_at", "2019-02-12 19:29:01.781749"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (41.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mBid Create (0.9ms)[0m  [1m[32mINSERT INTO "bids" ("price", "auction_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 1000], ["auction_id", 7], ["user_id", 8], ["created_at", "2019-02-12 19:29:01.826773"], ["updated_at", "2019-02-12 19:29:01.826773"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:38
+  [1m[36mAuction Create (2.3ms)[0m  [1m[32mINSERT INTO "auctions" ("title", "description", "ends_at", "reserve_price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Use the optical USB bandwidth, then you can synthesize the auxiliary matrix!"], ["description", "For Chuck Norris, NP-Hard = O(1)."], ["ends_at", "2019-04-12"], ["reserve_price", 500], ["user_id", 3], ["created_at", "2014-11-16 00:00:00"], ["updated_at", "2014-11-16 00:00:00"]]
+  ↳ db/seeds.rb:38
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mBid Create (0.4ms)[0m  [1m[32mINSERT INTO "bids" ("price", "auction_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 1000], ["auction_id", 8], ["user_id", 4], ["created_at", "2019-02-12 19:29:01.843273"], ["updated_at", "2019-02-12 19:29:01.843273"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mBid Create (0.4ms)[0m  [1m[32mINSERT INTO "bids" ("price", "auction_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 1000], ["auction_id", 8], ["user_id", 3], ["created_at", "2019-02-12 19:29:01.847293"], ["updated_at", "2019-02-12 19:29:01.847293"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mBid Create (0.3ms)[0m  [1m[32mINSERT INTO "bids" ("price", "auction_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 1000], ["auction_id", 8], ["user_id", 2], ["created_at", "2019-02-12 19:29:01.851371"], ["updated_at", "2019-02-12 19:29:01.851371"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mBid Create (0.7ms)[0m  [1m[32mINSERT INTO "bids" ("price", "auction_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 1000], ["auction_id", 8], ["user_id", 2], ["created_at", "2019-02-12 19:29:01.854917"], ["updated_at", "2019-02-12 19:29:01.854917"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mBid Create (0.4ms)[0m  [1m[32mINSERT INTO "bids" ("price", "auction_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 1000], ["auction_id", 8], ["user_id", 6], ["created_at", "2019-02-12 19:29:01.859450"], ["updated_at", "2019-02-12 19:29:01.859450"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (81.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:38
+  [1m[36mAuction Create (0.4ms)[0m  [1m[32mINSERT INTO "auctions" ("title", "description", "ends_at", "reserve_price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "We need to back up the neural AGP sensor!"], ["description", "Chuck Norris knows the last digit of PI."], ["ends_at", "2019-06-01"], ["reserve_price", 500], ["user_id", 10], ["created_at", "2017-05-31 00:00:00"], ["updated_at", "2017-05-31 00:00:00"]]
+  ↳ db/seeds.rb:38
+  [1m[35m (34.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mBid Create (0.6ms)[0m  [1m[32mINSERT INTO "bids" ("price", "auction_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 1000], ["auction_id", 9], ["user_id", 9], ["created_at", "2019-02-12 19:29:01.986070"], ["updated_at", "2019-02-12 19:29:01.986070"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mBid Create (0.7ms)[0m  [1m[32mINSERT INTO "bids" ("price", "auction_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 1000], ["auction_id", 9], ["user_id", 11], ["created_at", "2019-02-12 19:29:01.991828"], ["updated_at", "2019-02-12 19:29:01.991828"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mBid Create (0.4ms)[0m  [1m[32mINSERT INTO "bids" ("price", "auction_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 1000], ["auction_id", 9], ["user_id", 10], ["created_at", "2019-02-12 19:29:01.996778"], ["updated_at", "2019-02-12 19:29:01.996778"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mBid Create (0.8ms)[0m  [1m[32mINSERT INTO "bids" ("price", "auction_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 1000], ["auction_id", 9], ["user_id", 5], ["created_at", "2019-02-12 19:29:02.000782"], ["updated_at", "2019-02-12 19:29:02.000782"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mBid Create (0.4ms)[0m  [1m[32mINSERT INTO "bids" ("price", "auction_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 1000], ["auction_id", 9], ["user_id", 7], ["created_at", "2019-02-12 19:29:02.005500"], ["updated_at", "2019-02-12 19:29:02.005500"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:38
+  [1m[36mAuction Create (0.3ms)[0m  [1m[32mINSERT INTO "auctions" ("title", "description", "ends_at", "reserve_price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "We need to back up the primary SMTP system!"], ["description", "No statement can catch the ChuckNorrisException."], ["ends_at", "2019-04-19"], ["reserve_price", 500], ["user_id", 11], ["created_at", "2014-07-22 00:00:00"], ["updated_at", "2014-07-22 00:00:00"]]
+  ↳ db/seeds.rb:38
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mBid Create (0.4ms)[0m  [1m[32mINSERT INTO "bids" ("price", "auction_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 1000], ["auction_id", 10], ["user_id", 9], ["created_at", "2019-02-12 19:29:02.014772"], ["updated_at", "2019-02-12 19:29:02.014772"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mBid Create (0.4ms)[0m  [1m[32mINSERT INTO "bids" ("price", "auction_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 1000], ["auction_id", 10], ["user_id", 7], ["created_at", "2019-02-12 19:29:02.018732"], ["updated_at", "2019-02-12 19:29:02.018732"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mBid Create (0.4ms)[0m  [1m[32mINSERT INTO "bids" ("price", "auction_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 1000], ["auction_id", 10], ["user_id", 3], ["created_at", "2019-02-12 19:29:02.022419"], ["updated_at", "2019-02-12 19:29:02.022419"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mBid Create (0.7ms)[0m  [1m[32mINSERT INTO "bids" ("price", "auction_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 1000], ["auction_id", 10], ["user_id", 10], ["created_at", "2019-02-12 19:29:02.025959"], ["updated_at", "2019-02-12 19:29:02.025959"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mBid Create (0.4ms)[0m  [1m[32mINSERT INTO "bids" ("price", "auction_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 1000], ["auction_id", 10], ["user_id", 4], ["created_at", "2019-02-12 19:29:02.029947"], ["updated_at", "2019-02-12 19:29:02.029947"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "auctions"[0m
+  ↳ db/seeds.rb:63
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "bids"[0m
+  ↳ db/seeds.rb:64
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:65
+Started POST "/session" for 127.0.0.1 at 2019-02-12 11:34:26 -0800
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/davidko/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"js@winterfell.gov", "password"=>"[FILTERED]", "session"=>{"email"=>"js@winterfell.gov", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "js@winterfell.gov"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.59ms)
+Completed 200 OK in 163ms (Views: 11.5ms | ActiveRecord: 41.9ms)
+
+
