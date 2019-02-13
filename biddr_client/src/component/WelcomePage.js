@@ -7,4 +7,4 @@ const WelcomePage = props => (
         </h1>
     </main>
 )
-export default WelcomePage
+export default WelcomePage;

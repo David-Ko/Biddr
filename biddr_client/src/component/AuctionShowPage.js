@@ -10,36 +10,30 @@ class AuctionShowPage extends Component {
         this.state={
             auction: null,
             loading: true
-        }
+        };
         this.createBid = this.createBid.bind(this);
-    }
+    };
 
     createBid(params) {
         let id = this.props.match.params.id
         Bid.create(params, id).then(data => {
-        //   if (data.errors) {
-            // this.setState({ errors: data.errors });
-        //   } else {
-            // this.props.history.push("/");
-            // this.props.history.push(`/auctions/${data.auction.id}`);
             this.props.history.push(`/auctions`);
-        //   }
         });
-    }
+    };
 
     componentDidMount(){
         let id = this.props.match.params.id
         Auction.one(id).then(auction=>{
             this.setState({auction: auction, loading: false})
         })
-    }
+    };
     
     render(){
         if (this.state.loading){
             return (<h1>
                 Loading...
             </h1>)
-        }
+        };
         if (!this.state.auction){
             return (
                 <h1>This auction doesn't exist</h1>
@@ -49,15 +43,11 @@ class AuctionShowPage extends Component {
             <main>
                 <h1>Auction Details</h1>
                 <AuctionDetails {...this.state.auction}/>
-                
                 <NewBidForm onSubmit={this.createBid}/>
-            
                 <h3>Bids</h3>
-                <BidList 
-                    bids={this.state.auction.bids}
-                    />
+                <BidList bids={this.state.auction.bids}/>
             </main>
         )
-    }
-}
+    };
+};
 export default AuctionShowPage;

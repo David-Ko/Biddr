@@ -2,9 +2,7 @@ import React from 'react';
 import {Route, Redirect} from "react-router-dom";
 
 function AuthRoute (props) {
-
     const { isAllowed, component: Component, ...restProps} = props;
-
     return(
         <Route {...restProps}
                 render = {routeProps=>{
@@ -16,5 +14,5 @@ function AuthRoute (props) {
                 }}
         />
     )
-}
+};
 export default AuthRoute;

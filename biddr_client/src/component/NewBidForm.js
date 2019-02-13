@@ -15,22 +15,20 @@ function NewBidForm (props) {
                 price: formData.get('price')
             }
         )
-    }
-
+    };
     return (
-
         <div>
             <form className="BidForm" onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor="price">price</label> <br />
                     <FormErrors noField forField="price" errors={errors} />
-                    <textarea name="price" id="price" cols="60" rows="4" />
+                    <textarea name="price" id="price" placeholder="e.g. 500 (no need to put $ sign)" cols="60" rows="4" />
                 </div>
                 <div>
                     <input type="submit" value="Submit" />
                 </div>
-        </form>
-      </div>
-    );
-}
+            </form>
+        </div>
+    )
+};
 export default NewBidForm;

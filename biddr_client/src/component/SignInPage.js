@@ -29,7 +29,7 @@ class SignInPage extends Component {
         this.setState({ errors: [{ message: "Wrong email or password!" }] });
       }
     });
-  }
+  };
 
   render() {
     const { errors } = this.state;
@@ -55,8 +55,7 @@ class SignInPage extends Component {
           <input type="submit" value="Sign In" />
         </form>
       </main>
-    );
-  }
-}
-
+    )
+  };
+};
 export default SignInPage;

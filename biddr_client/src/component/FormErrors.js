@@ -8,7 +8,7 @@ const FormErrors = props => {
     filteredErrors = errors.filter(
       e => e.field.toLowerCase() === forField.toLowerCase()
     );
-  }
+  };
 
   return filteredErrors.length > 0 ? (
     <ul className="FormErrors">
@@ -20,5 +20,4 @@ const FormErrors = props => {
     </ul>
   ) : null;
 };
-
 export default FormErrors;

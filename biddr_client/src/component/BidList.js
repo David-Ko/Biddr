@@ -14,5 +14,5 @@ const BidList = props => {
 
         </ul>
     )
-}
+};
 export default BidList;

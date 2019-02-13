@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 function AuctionDetails (props){
     return (
@@ -7,11 +7,7 @@ function AuctionDetails (props){
             <p><b>Description:</b> {props.description}</p>
             <p><b>Ends at:</b> {props.ends_at}</p>
             <p><b>Reserve price:</b> {props.reserve_price}</p>
-
-            <p>
-            </p>  
         </div>
     )
-}
-
+};
 export default AuctionDetails;

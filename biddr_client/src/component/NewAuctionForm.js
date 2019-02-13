@@ -1,10 +1,8 @@
 import React from 'react';
 import FormErrors from './FormErrors';
 
-
 function NewAuctionForm (props) {
     const {errors = []} = props;
-
     function handleSubmit (event){
         event.preventDefault();
 
@@ -19,7 +17,7 @@ function NewAuctionForm (props) {
                 reserve_price: formData.get('reserve_price')
             }
         )
-    }
+    };
 
     return (
 
@@ -38,19 +36,18 @@ function NewAuctionForm (props) {
                 <div>
                     <label htmlFor="ends_at">ends_at</label> <br />
                     <FormErrors noField forField="ends_at" errors={errors} />
-                    <textarea name="ends_at" id="ends_at" cols="60" rows="4" />
+                    <textarea name="ends_at" id="ends_at" placeholder="e.g. 2019-12-12" cols="60" rows="4" />
                 </div>
                 <div>
                     <label htmlFor="reserve_price">reserve_price</label> <br />
                     <FormErrors noField forField="reserve_price" errors={errors} />
-                    <textarea name="reserve_price" id="reserve_price" cols="60" rows="4" />
+                    <textarea name="reserve_price" id="reserve_price" placeholder="e.g. 500 (no need to use $ sign)" cols="60" rows="4" />
                 </div>
                 <div>
                     <input type="submit" value="Submit" />
                 </div>
         </form>
       </div>
-    );
-}
-
+    )
+};
 export default NewAuctionForm;

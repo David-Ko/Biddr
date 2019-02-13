@@ -6,5 +6,5 @@ const BidDetails = props =>{
             <p>${props.price} on {props.created_at}</p>
         </div>
     )
-}
+};
 export default BidDetails;

@@ -9,7 +9,7 @@ class AuctionIndexPage extends Component {
     this.state = {
       auctions: null
     };
-  }
+};
 
   componentDidMount() {
     Auction.all().then(auctions => {
@@ -17,7 +17,7 @@ class AuctionIndexPage extends Component {
         auctions: auctions
       });
     });
-  }
+  };
 
   render() {
     if (!this.state.auctions) {
@@ -26,7 +26,7 @@ class AuctionIndexPage extends Component {
           <h1>Loading...</h1>
         </main>
       );
-    }
+    };
     return (
       <main>
         <h1>Auctions</h1>
@@ -39,7 +39,7 @@ class AuctionIndexPage extends Component {
           ))}
         </ul>
       </main>
-    );
-  }
-}
+    )
+  };
+};
 export default AuctionIndexPage;

@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 import { Auction } from "../requests";
-import NewAuctionForm from './NewAuctionForm'
+import NewAuctionForm from './NewAuctionForm';
 
 class AuctionNewPage extends Component {
   constructor(props){
       super(props)
       this.state = {
           errors: []
-      }
+      };
       this.createAuction = this.createAuction.bind(this);
-  }
+  };
 
   createAuction(params){
       Auction.create(params).then(data=>{
@@ -17,11 +17,9 @@ class AuctionNewPage extends Component {
               this.setState({errors: data.erros})
           }else{
               this.props.history.push(`/auctions/${data.id}`)
-          }
+          };
       })
-  }
-
-
+  };
 
   render() {
     return (
@@ -32,8 +30,7 @@ class AuctionNewPage extends Component {
           onSubmit={this.createAuction}
         />
       </main>
-    );
-  }
-}
-
+    )
+  };
+};
 export default AuctionNewPage;
