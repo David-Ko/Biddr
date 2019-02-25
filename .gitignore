@@ -310,7 +310,7 @@ buck-out/
 *.class
 
 # Generated files
-bin/
+# bin/
 gen/
 out/
 
